@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Resize Image</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h2>Resize Images</h2>
+            <p>reduce images without losing their quality.</p>
+            <input type="file" id="upload" onchange="resize()" accept=".jpg, .jpeg, .png" hidden />
+            <label for="upload" id="label_upload">
+                <p>Upload or drop</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-upload" width="44"
+                    height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1" />
+                    <polyline points="9 15 12 12 15 15" />
+                    <line x1="12" y1="12" x2="12" y2="21" />
+                </svg>
+            </label>
+
+            <img id="result" />
+
+            <div id="buttons" class="buttons">
+                <a class="download" id="download">Download</a>
+                <a class="cancel" id="cancel">Cancel</a>
+            </div>
+
+            <div class="loader_container" id="loading_container">
+                <div id="loader">
+                    <div class="loader"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>© Thayran Gabriel 2023</p>
+        </footer>
+
+    </div>
+
+    <script src="resize.js"></script>
+</body>
+
+</html>
